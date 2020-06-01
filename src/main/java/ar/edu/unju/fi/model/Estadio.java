@@ -5,24 +5,33 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+
 /**
- * @author Antonella Benicio
+ * @author Benicio Antonella
  *
  */
+@Component
 public class Estadio {
-	private String nombre ;
-	private LocalDate fechaFundacion ;
-	private String ciudad ;
-	private int capacidad ;
-	private String direccion ; 
+	private String nombre;
+	private LocalDate fechaFundacion;
+	private String ciudad;
+	private int capacidad;
+	private String direccion;
 	
-	//constructor1
+	//Constructor 
 	public Estadio() {
 		// TODO Auto-generated constructor stub
 	}
 
-	//constructor2
-	
+	//Constructor 
+	/**
+	 * @param nombre
+	 * @param fechaFundacion
+	 * @param ciudad
+	 * @param capacidad
+	 * @param direccion
+	 */
 	public Estadio(String nombre, LocalDate fechaFundacion, String ciudad, int capacidad, String direccion) {
 		super();
 		this.nombre = nombre;
@@ -32,8 +41,8 @@ public class Estadio {
 		this.direccion = direccion;
 	}
 
-	//getter and setter
-	
+
+	//Getter and Setter
 	public String getNombre() {
 		return nombre;
 	}
@@ -73,8 +82,9 @@ public class Estadio {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+	
 
-	//to string
+	//ToString
 	@Override
 	public String toString() {
 		return "Estadio [nombre=" + nombre + ", fechaFundacion=" + fechaFundacion + ", ciudad=" + ciudad
@@ -82,16 +92,4 @@ public class Estadio {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-
 }

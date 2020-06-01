@@ -5,33 +5,38 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+
 /**
- * @author Antonella Benico 
+ * @author Benicio Antonella
  *
  */
+@Component
 public class Noticia {
 	private LocalDate fecha;
 	private String titulo;
 	private String resumen;
 	
-	//constructor1
-	
+	//Constructor 
 	public Noticia() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	 //constructor 2
 
-		public Noticia(LocalDate fecha, String titulo, String resumen) {
-			super();
-			this.fecha = fecha;
-			this.titulo = titulo;
-			this.resumen = resumen;
-		}
-		
-	
-	//getter and setter
+	//Constructor 
+	/**
+	 * @param fecha
+	 * @param titulo
+	 * @param resumen
+	 */
+	public Noticia(LocalDate fecha, String titulo, String resumen) {
+		super();
+		this.fecha = fecha;
+		this.titulo = titulo;
+		this.resumen = resumen;
+	}
 
+
+	//Getter and Setter
 	public LocalDate getFecha() {
 		return fecha;
 	}
@@ -55,18 +60,13 @@ public class Noticia {
 	public void setResumen(String resumen) {
 		this.resumen = resumen;
 	}
-//to string
+	
 
+	//ToString
 	@Override
 	public String toString() {
 		return "Noticia [fecha=" + fecha + ", titulo=" + titulo + ", resumen=" + resumen + "]";
 	}
 	
 	
-	
-	
 }
-
-
-
-			

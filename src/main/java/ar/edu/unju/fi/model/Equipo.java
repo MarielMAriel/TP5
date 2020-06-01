@@ -3,10 +3,11 @@
  */
 package ar.edu.unju.fi.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Antonella Benicio
+ * @author Benicio Antonella
  *
  */
 @Component
@@ -14,19 +15,22 @@ public class Equipo {
 	private String nombre;
 	private Estadio estadio;
 	
-	//constructor
+	//Constructor 
 	public Equipo() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	//constructor
-	
+
+	//Constructor 
+	/**
+	 * @param estadio
+	 */
+	@Autowired
 	public Equipo(Estadio estadio) {
 		super();
 		this.estadio = estadio;
 	}
 
-	//getter and setter
+	//Getter and Setter
 	public String getNombre() {
 		return nombre;
 	}
@@ -43,14 +47,13 @@ public class Equipo {
 		this.estadio = estadio;
 	}
 
+
+	//ToString
 	@Override
 	public String toString() {
-		return "Equipo [nombre=" + nombre + "]";
+		return "Equipo [nombre=" + nombre + ", estadio=" + estadio + "]";
 	}
 	
-	//to string
 	
 	
-
-
 }
